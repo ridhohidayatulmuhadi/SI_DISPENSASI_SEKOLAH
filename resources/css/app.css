@@ -1,0 +1,49 @@
+@import "@tabler/icons-webfont/dist/tabler-icons.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+/* === Tom Select + Tailwind FIX === */
+.ts-control {
+    @apply w-full border border-gray-300 rounded px-3 py-2 text-sm;
+}
+
+.ts-control input {
+    @apply text-sm;
+}
+
+.ts-control.focus {
+    @apply border-blue-500 ring-1 ring-blue-500;
+}
+
+.ts-dropdown {
+    @apply border border-gray-300 rounded shadow bg-white text-sm;
+}
+
+.ts-dropdown .option {
+    @apply px-3 py-2 cursor-pointer;
+}
+
+.ts-dropdown .option.active {
+    @apply bg-blue-600 text-white;
+}
+
+.ts-dropdown .option:hover {
+    @apply bg-blue-100;
+}
+
+.ts-wrapper.single .ts-control {
+    @apply bg-white;
+}
